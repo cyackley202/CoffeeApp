@@ -1,0 +1,27 @@
+﻿@model CoffeeAppRevisted.Models.Coffee.ShowCoffeeDetailsViewModel
+
+    <div>
+        <h2>Check out THIS Coffee!</h2> <!--Should display a specified Coffee? Could possibly display only names and then route to a different view with full details?-->
+    </div>
+
+
+    <ul class="list-group">
+       
+        
+        <li>
+            <div>
+                <h4>@Model.Name</h4>
+            </div>
+            <div>
+                <h4>ID = @Model.Price</h4>
+            </div>
+            <div>
+                <h4>@Model.Description</h4>
+            </div>
+        </li>
+        
+    </ul>
+
+    <button>
+        <a asp-action="CoffeesMenu" asp-controller="Coffee">Return to Menu</a>
+    </button>

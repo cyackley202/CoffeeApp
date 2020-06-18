@@ -1,0 +1,14 @@
+﻿@model CoffeeAppRevisted.Models.Coffee.DeleteCoffeeViewModel
+
+    <form asp-action="PurgeCoffee" asp-controller="Coffee">
+        <div class="form-group">
+
+            <h4>What is the ID of the coffee you wish to delete?</h4>
+            <label asp-for="ID"></label>
+            <input class="form-control" placeholder="Enter ID" asp-for="ID" />
+
+          
+        </div>
+
+        <button type="submit" class="btn btn-primary">Delete Coffee</button>
+    </form>

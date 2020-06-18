@@ -1,0 +1,24 @@
+﻿@model CoffeeAppRevisted.Models.Coffee.UpdateCoffeeViewModel
+
+
+<form asp-action="UpdatedCoffee" asp-controller="Coffee"> 
+    <div class="form-group">
+
+        <h4>What is the ID of the coffee you wish to update?</h4>
+        <label asp-for="ID"></label>
+        <input class="form-control" placeholder="Enter ID" asp-for="ID" />
+
+        <h4>Please enter new information below.</h4>
+
+        <label asp-for="Name"></label>
+        <input class="form-control" placeholder="Enter new name" asp-for="Name" />
+
+        <label asp-for="Description"></label>
+        <input class="form-control" placeholder="Enter new description" asp-for="Description" />
+
+        <label asp-for="Price"></label>
+        <input class="form-control" placeholder="Enter new price" asp-for="Price" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Change Coffee</button>
+</form>

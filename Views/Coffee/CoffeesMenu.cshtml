@@ -1,0 +1,34 @@
+﻿@model CoffeeAppRevisted.Models.Coffee.CoffeesViewModel
+
+<div>
+    <h2>Check out THESE Coffees!</h2> <!--Should display a specified Coffee? Could possibly display only names and then route to a different view with full details?-->
+</div>
+
+<ul class="list-group">
+    @foreach (var coffee in Model.Coffees)
+    {
+        <li class="list-group-item">
+            <div>
+                <h4>@coffee.Name</h4>
+                <a asp-controller="Coffee"
+                   asp-action="ShowCoffeeDetails"
+                   asp-route-ID="@coffee.ID">
+                    Details
+                </a>
+            </div>
+        </li>
+    }
+</ul>
+
+
+<button>
+    <a asp-action="GenerateCoffee" asp-controller="Coffee">Add Coffee</a>
+</button>
+
+<button>
+    <a asp-action="UpdateCoffee" asp-controller="Coffee">Update Coffee</a>
+</button>
+
+<button>
+    <a asp-action="DeleteCoffee" asp-controller="Coffee">Delete Coffee</a>
+</button>

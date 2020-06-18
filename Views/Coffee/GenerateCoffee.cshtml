@@ -1,0 +1,18 @@
+﻿@model CoffeeAppRevisted.Models.Coffee.GenerateCoffeeViewModel
+
+<form asp-action="InsertCoffee" asp-controller="Coffee">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" placeholder="Enter new name" asp-for="Name" />
+
+        <label asp-for="Description"></label>
+        <input class="form-control" placeholder="Enter new description" asp-for="Description" />
+
+        <label asp-for="Price"></label>
+        <input class="form-control" placeholder="Enter new price" asp-for="Price" />
+    </div>
+
+    <input asp-for="ID" value="@Model.ID" type="hidden" />
+
+    <button type="submit" class="btn btn-primary">Add Coffee</button>
+</form>

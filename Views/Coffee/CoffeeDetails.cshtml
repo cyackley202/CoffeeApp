@@ -1,0 +1,20 @@
+﻿@model CoffeeAppRevisted.Models.Coffee.Coffee
+
+<h1>@Model.Name Information</h1>
+
+
+<ul>
+    <li>
+        @Model.Description
+    </li>
+    <li>
+        @Model.Price
+    </li>
+</ul>
+
+<div>
+    <button>
+        <a asp-action="CoffeesMenu" asp-controller="Coffee">Return to Menu</a>
+    </button>
+</div>
+
